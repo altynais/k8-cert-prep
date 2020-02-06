@@ -3,6 +3,9 @@ kind: Pod
 metadata:
   labels:
     run: ubuntu-pod
+    dev: sam
+    env: test
+    team: hive
   name: ubuntu-pod
 spec:
   containers:
