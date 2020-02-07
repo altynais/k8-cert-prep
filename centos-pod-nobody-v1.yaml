@@ -2,11 +2,12 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    run: centos-pod
-  name: centos-pod
+    run: centos-pod-nobody-v1
+  name: centos-pod-nobody-v1
 spec:
-  nodeSelector:
-    ssd: "true"
+  securityContext:
+    runAsUser: 65534
+    fsGroup: 65534
   containers:
   - image: centos
     name: centos
